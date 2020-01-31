@@ -126,6 +126,13 @@ class DoublyLinkedList:
         else:
             node.delete()
 
+    # Connect dll insert to insert after ListNode    
+    def insert_after(self, current, value):
+        current.insert_after(value)
+        self.length += 1
+        if current == self.tail:
+            self.tail = self.tail.next
+
     """Returns the highest value currently in the list"""
     def get_max(self):
         max_value = self.head.value
@@ -134,5 +141,4 @@ class DoublyLinkedList:
             if current.value > max_value:
                 max_value = current.value
             current = current.next
-
         return max_value
