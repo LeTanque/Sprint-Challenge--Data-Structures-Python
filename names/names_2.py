@@ -16,10 +16,18 @@ read_names_2.close()
 # Cache solution
 duplicates = []
 cash = {}
+# cash = set()
+# Check out sets from python docs
+# intersection(*others)
+# set & other & ...
+# Return a new set with elements common to the set and all others.
 
+# Put's each name in the dict
 for name in names_1:
     cash[name] = True
+    # cash.add(name)  # This is a set and how you add to it
 
+# Compares each name to the name in the dict
 for name in names_2:
     if name in cash:
         duplicates.append(name)

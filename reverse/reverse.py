@@ -55,18 +55,18 @@ class LinkedList:
     def reverse_list(self):
         # these are the pointers. Starts at head with no previous
         prev = None
-        noodle = self.head
-        # While noodle is not none
-        while noodle:
+        node = self.head
+        # While node is not none
+        while node:
             # Store current next node in new next
-            new_next = noodle.next_node
-            # Noodles next node becomes previous
-            noodle.next_node = prev
-            # Previous noodle becomes current noodle
-            prev = noodle
-            # Current noodle becomes next noodle
-            noodle = new_next
-            # Head becomes prev, which is noodle
+            new_next = node.next_node
+            # nodes next node becomes previous
+            node.next_node = prev
+            # Previous node becomes current node
+            prev = node
+            # Current node becomes next node
+            node = new_next
+            # Head becomes prev, which is node
             self.head = prev
 
 
@@ -83,3 +83,4 @@ llist.contains(13)
 llist.reverse_list()
 print("\nreverse_list Linked List")
 # llist.contains()
+# Complexity is linear of reverse list
